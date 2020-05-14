@@ -657,7 +657,7 @@ public class MineCommands {
 			permissions = {"mineresetlite.mine.composition"},
 			min = 2, max = -1, onlyPlayers = false)
 	public void setStructure(CommandSender sender, String[] args) {
-		Mine[] mines = plugin.matchMines(StringTools.buildSpacedArgument(args, 2));
+		Mine[] mines = plugin.matchMines(StringTools.buildSpacedArgument(args, 1));
 		if (invalidMInes(sender, mines)) return;
 		//Match material
 		String[] bits = args[args.length - 2].split(":");
